@@ -1,0 +1,208 @@
+/*Homepage*/
+
+.titlediv {
+    color: rgba(167, 38, 38, 0.973);
+    padding-top: 1%;
+    text-align: center;
+    font-size: 100px;
+    font-family: Cookie, Arial, sans-serif;
+}
+
+.bundesländertitle {
+    color: rgba(255, 255, 255, 0.781);
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#blMenu {
+    list-style: none;
+}
+
+.bundesländerliste a {
+    color: rgba(255, 255, 255, 0.781);
+    text-decoration: none;
+    text-align: center;
+}
+
+.mainpagebackground {
+    background-color: rgb(110, 172, 169);
+}
+
+
+/*Top navigation bar*/
+
+.topmenuelist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.281);
+    ;
+}
+
+.topmenuelist li {
+    float: left;
+    border-right: 3px solid rgba(0, 0, 0, 0.11);
+}
+
+.topmenuelist li:last-child {
+    border-right: none;
+}
+
+.topmenuelist a {
+    display: block;
+    color: white;
+    font-family: Cookie;
+    font-size: 30px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topmenuelist a:hover:not(.active) {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.navaktiv {
+    background-color: rgba(187, 19, 19, 0.562);
+}
+
+
+/*------------------------Austria------------------------*/
+
+
+/* WappenGrid */
+
+.grid-container {
+    display: grid;
+    height: 660px;
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    padding: 0;
+}
+
+.grid-container div {
+    text-align: center;
+    height: 220px;
+    width: 100%;
+    font-size: 30px;
+    transition: background-color 200ms;
+}
+
+.wappen {
+    display: block;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+}
+
+.wappen-title {
+    top: 0px;
+    z-index: 10;
+}
+
+.grid-container div:hover {
+    background-color: rgba(255, 255, 255, 0.295);
+}
+
+
+/*YT-Video*/
+
+.videowrapper {
+    text-align: center;
+    float: none;
+    clear: both;
+    width: 100%;
+    padding-bottom: 10.25%;
+    position: relative;
+    padding-top: 25px;
+}
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 97.5%;
+    position: relative;
+    padding-top: 25px;
+    height: 900px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.box {
+    position: relative;
+    background: gray
+}
+
+.box div {
+    position: absolute
+}
+
+
+/* Top-Video */
+
+
+/*
+header {
+    background: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    padding: 0.5em;
+}
+
+nav a {
+    color: inherit;
+    padding: 0 12px;
+    text-decoration: none;
+}
+
+.overlay {
+    font-size: 100px;
+    justify-content: center;
+}
+
+.overlay h2 {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    margin: 2rem 3rem 0;
+    mix-blend-mode: overlay;
+    padding: 5px 15px;
+    text-align: center;
+    font-family: Cookie, Arial, sans-serif;
+}
+*/
+
+
+/*------------------------Wien------------------------*/
+
+
+/*------------------------Niederösterreich------------------------*/
+
+
+/*------------------------Steiermark------------------------*/
+
+
+/*------------------------Oberösterreich------------------------*/
+
+
+/*------------------------Salzburg------------------------*/
+
+
+/*------------------------Tirol------------------------*/
+
+
+/*------------------------Kärnten------------------------*/
+
+
+/*------------------------Vorarlberg------------------------*/
+
+
+/*------------------------Burgenland------------------------*/
+
+
+/*------------------------Burgenland------------------------*/
