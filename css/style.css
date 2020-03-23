@@ -111,48 +111,6 @@ body::-webkit-scrollbar-track {
 /*------------------------Austria------------------------*/
 
 
-/* WappenGrid */
-
-.grid-container {
-    display: grid;
-    height: 660px;
-    align-content: center;
-    grid-template-columns: auto auto auto;
-    padding: 0;
-}
-
-.grid-container div {
-    text-align: center;
-    height: 220px;
-    width: 100%;
-    font-size: 30px;
-    transition: background-color 200ms;
-}
-
-.grid-container div h2 {
-    font-family: Cookie;
-    font-size: 100%;
-}
-
-.wappen {
-    display: block;
-    margin-top: 35px;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: -1;
-    height: auto;
-}
-
-.wappen-title {
-    top: 0px;
-    z-index: 10;
-}
-
-.grid-container div:hover {
-    background-color: rgba(255, 255, 255, 0.295);
-}
-
-
 /* Top-Video */
 
 .overlay-desc {
@@ -175,7 +133,7 @@ body::-webkit-scrollbar-track {
 }
 
 
-/* New-Grid */
+/* WappenGrid */
 
 .grid-container2 {
     float: left;
@@ -193,7 +151,8 @@ body::-webkit-scrollbar-track {
 
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 3px solid rgba(0, 0, 0, 0.575);
+    border-radius: 5px;
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -201,6 +160,13 @@ body::-webkit-scrollbar-track {
     /* ändere uns um Boxengröße zu verändern */
     width: var(--grid-item-size);
     /* aber wenn du uns änderst musst du auch imagea auf unsere max-height stellen und die width auf die prozent 👍🏻*/
+    transition: ease-in-out;
+    box-shadow: 5px 14px 20px -7px;
+}
+
+.grid-item:hover {
+    transform: translate(-3px, 10px);
+    background-color: red;
 }
 
 .img-container {
@@ -258,7 +224,6 @@ body::-webkit-scrollbar-track {
     padding-top: 1.5rem;
     padding-right: 4rem;
     padding-bottom: 20.5rem;
-    
 }
 
 #text-next-grid2 {
