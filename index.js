@@ -1,13 +1,51 @@
 init();
 
+var floatvalue = null;
+var clearvalue = null;
+
+
 $(document).ready(function() {
+    checkResize();
     setTimeout(function() {
         $("#cookieConsent").fadeIn(200);
     }, 4000);
     $("#closeCookieConsent, .cookieConsentOK").click(function() {
         $("#cookieConsent").fadeOut(200);
     });
+    floatvalue = $("#grid-div div").css("float");
+    clearvalue = $("#grid-div div").css("clear");
 });
+
+$(window).on('resize', function(){
+   checkResize();
+});
+
+function checkResize(){
+  
+    var win = $(this); 
+
+
+    //If - Braucht echt große Hilfe
+    if (win.width() <= 1171) {
+        $(".breaker").css("background-color", "rgba(0, 0, 0, 0.075)");
+        
+        $("#grid-div div").css("float", "left");
+       
+        $("#grid-div div").css("clear", "none");
+
+    }else{ //else pfad entfernt nicht die #grid-div div formatierung egal was probiert
+        $(".breaker").css("background-color", "rgba(0, 0, 0, 0.075)");
+
+    }
+
+    if (win.width() <= 1277) { 
+        $(".topnav a.active").css("background-color", "rgba(0, 0, 0, 0)");
+        $(".topnav a.active").css("color", "red");
+    }else{
+        $(".topnav a.active").css("background-color", "rgba(187, 19, 19, 0.562)");
+        $(".topnav a.active").css("color", "white");
+    }
+}
 
 
 function init() {
@@ -31,5 +69,5 @@ function changeLandText(land) {
     console.log(land);
 
     document.cookie = "Land="+land+";";
-    document.getElementById("text-next-grid").innerHTML = LaenderTexte[land - 1] + " nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est ollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et  Lorem ipsum dolor  laborum. Lorem ipsum dolor  id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la";
+    document.getElementById("text-next-grid").innerHTML = LaenderTexte[land - 1];
 }
