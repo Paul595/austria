@@ -161,12 +161,13 @@ body::-webkit-scrollbar-track {
     width: var(--grid-item-size);
     /* aber wenn du uns änderst musst du auch imagea auf unsere max-height stellen und die width auf die prozent 👍🏻*/
     transition: ease-in-out;
-    box-shadow: 5px 14px 20px -7px;
+    box-shadow: -5px 14px 20px -7px;
 }
 
 .grid-item:hover {
     transform: translate(-3px, 10px);
     background-color: red;
+    box-shadow: -5px 10px 10px -10px;
 }
 
 .img-container {
