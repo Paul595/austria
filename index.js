@@ -1,6 +1,10 @@
 init();
 
 $(document).ready(function() {
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    document.cookie = "LastVisit="+time+";";
+    
+    checkResize();
     setTimeout(function() {
         $("#cookieConsent").fadeIn(200);
     }, 4000);
