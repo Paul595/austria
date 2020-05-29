@@ -4,10 +4,15 @@
     --grid-item-size: 10rem;
     --grid-img-size: 60%;
     --grid-font-size: 1.5rem;
+
+    
+    --footer-background: rgb(214, 214, 214);
+    --footer-textcolor: rgb(0, 0, 0);
 }
 
 .titlediv {
     color: rgba(167, 38, 38, 0.973);
+    padding-top: 1%;
     text-align: center;
     font-size: 100px;
     font-family: Cookie, Arial, sans-serif;
@@ -31,7 +36,8 @@
 
 body {
     /*background-color: rgb(110, 172, 169);*/
-    background-color: rgb(155, 240, 235);
+    background-color: white;
+    zoom: 110%;
 }
 
 body::-webkit-scrollbar {
@@ -39,11 +45,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(2, 37, 35);
+    background-color: rgb(7, 93, 88);
 }
 
 body::-webkit-scrollbar-track {
-    background-color: rgb(7, 93, 88);
+    background-color: rgb(2, 37, 35);
 }
 
 
@@ -53,27 +59,35 @@ body::-webkit-scrollbar-track {
     position: relative;
     background-color: rgba(0, 0, 0, 0.281);
     overflow: hidden;
+    z-index: 99;
+    transition: 0.3s;
 }
 
 .topnav a {
     float: left;
     display: block;
     color: white;
+    text-shadow: 3px 3px 5px #00000093;
     font-family: Cookie;
-    font-size: 30px;
+    font-size: 2.25rem;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     pointer-events: all;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 4%;
 }
 
 .topnav a:hover {
-    background-color: rgba(0, 0, 0, 0.11);
+    background-color: rgba(0, 0, 0, 0.568);
 }
 
 .topnav a.active {
     background-color: rgba(187, 19, 19, 0.562);
     color: white;
+    pointer-events: none;
+ 
 }
 
 .topnav-centered a {
@@ -114,21 +128,29 @@ body::-webkit-scrollbar-track {
 /* Top-Video */
 
 .overlay-desc {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     align-items: center;
     justify-content: center;
-    z-index: 0;
+    z-index: 100;
     pointer-events: none;
 }
 
 #topvideo {
     pointer-events: none;
     width: 100%;
-    height: 45rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
+
+#topimg {
+    pointer-events: none;
+    width: 100%;
+    height: 30rem;
     object-fit: cover;
 }
 
@@ -144,7 +166,7 @@ body::-webkit-scrollbar-track {
     padding-top: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-bottom: 7.5rem;
+    padding-bottom: 2.5rem;
     justify-items: center;
     justify-content: left;
 }
@@ -184,6 +206,11 @@ body::-webkit-scrollbar-track {
     transform: translate(-50%, -50%);
     max-height: var(--grid-item-size);
 }
+.img-container:hover{
+    animation: color-rotate 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
 .overlay-img {
     position: absolute;
@@ -221,16 +248,18 @@ body::-webkit-scrollbar-track {
 
 #text-next-grid {
     font-family: 'Baloo Bhai 2', cursive;
-    font-size: 2.5rem;
+    font-size: 200%;
+    padding-left: 1.5rem;
     padding-top: 1.5rem;
     padding-right: 4rem;
-    padding-bottom: 20.5rem;
+    padding-bottom: 1rem;
 }
 
 #text-next-grid2 {
     font-family: 'Baloo Bhai 2', cursive;
-    font-size: 2.5rem;
+    font-size: 200%;
     padding-top: 5rem;
+    padding-left: 1.5rem;
     padding-right: 4rem;
     padding-bottom: 0rem;
     font-weight: 900;
@@ -239,9 +268,10 @@ body::-webkit-scrollbar-track {
 
 #text-next-video {
     font-family: 'Baloo Bhai 2', cursive;
-    font-size: 2.5rem;
+    font-size: 200%;
     padding-left: 3.5rem !important;
     padding-top: 4rem;
+    padding-right: 1.5rem;
     margin-bottom: 2.5%;
 }
 
@@ -250,37 +280,44 @@ body::-webkit-scrollbar-track {
 
 .float-vid {
     float: right;
-    padding-left: 2.5%;
+    padding-left: 5%;
     padding-right: 2.5%;
     margin-bottom: 2.5%;
 }
 
+.breaker {
+    height: 5px;
+}
 
-/*------------------------Wien------------------------*/
-
-
-/*------------------------Niederösterreich------------------------*/
-
-
-/*------------------------Steiermark------------------------*/
+/* Sticky Footer */
 
 
-/*------------------------Oberösterreich------------------------*/
 
 
-/*------------------------Salzburg------------------------*/
+
+#sticky-footer {
+  flex-shrink: none;
+  background-color:var(--footer-background);
+}
+
+#footer-text{
+    color:var(--footer-textcolor);
+    font-family: 'Baloo Bhai 2';
+    font-size: 1.25rem;
+}
+.footer-content{
+    padding: 5%;
+}
 
 
-/*------------------------Tirol------------------------*/
+/*rainbow effect*/
 
-
-/*------------------------Kärnten------------------------*/
-
-
-/*------------------------Vorarlberg------------------------*/
-
-
-/*------------------------Burgenland------------------------*/
-
-
-/*------------------------Burgenland------------------------*/
+@keyframes color-rotate{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    
+    to{
+        filter: hue-rotate(360deg);
+    }
+}

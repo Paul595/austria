@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Österreich</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cookie.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai+2" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+
+
+    <div class="video-container">
+        <img id="topimg" src="images/wahrzeichen/salzburg.jpeg" />
+
+        <div class="overlay-desc">
+            <div class="topnav" id="topNavigation">
+
+                <div class="topnav-centered">
+                    <a href="index.html">Österreich</a>
+                </div>
+
+                <a href="wien.html">Wien</a>
+                <a href="niederosterreich.html">Niederoesterreich</a>
+                <a href="steiermark.html">Steiermark</a>
+                <a href="oberoesterreich.html">Oberösterreich</a>
+
+
+                <div class="topnav-right">
+                    <a href="salzburg.html" class="active">Salzburg</a>
+                    <a href="tirol.html">Tirol</a>
+                    <a href="kaernten.html">Kärnten</a>
+                    <a href="vorarlberg.html">Vorarlberg</a>
+                    <a href="burgenland.html">Burgenland</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="grid-div" style="overflow: auto;">
+        <div class="grid-container2">
+            <div class="img-container grid-item">
+                <img src="images/Wappen/Wien.png" alt="Wien" class="imagea">
+                <div onclick="changeLandText(1)" class="overlay-img">
+                    <div class="text-img">Wien</div>
+                </div>
+            </div>
+            <div class="img-container grid-item">
+                <img src="images/Wappen/Niederoesterreich.png" alt="Niederösterreich" class="imagea">
+                <div onclick="changeLandText(2)" class="overlay-img">
+                    <div class="text-img">Niederösterreich</div>
+                </div>
+            </div>
+            <div class="img-container grid-item">
+                <img src="images/Wappen/Steiermark.png" alt="Steiermark" class="imagea">
+                <div onclick="changeLandText(3)" class="overlay-img">
+                    <div class="text-img">Steiermark</div>
+                </div>
+            </div>
+            <div class="img-container grid-item">
+                <img src="images/Wappen/Oberoesterreich.png" alt="Oberösterreich" class="imagea">
+                <div onclick="changeLandText(4)" class="overlay-img">
+                    <div class="text-img">Oberösterreich</div>
+                </div>
+            </div>
+            <div class="img-container grid-item">
+                <img src="images/Wappen/Salzburg.png" alt="Salzburg" class="imagea">
+                <div onclick="changeLandText(5)" class="overlay-img">
+                    <div class="text-img">Salzburg</div>
+                </div>
+            </div>
+            <div class="img-container grid-item">
+                <img src="images/Wappen/Tirol.png" alt="Tirol" class="imagea">
+                <div onclick="changeLandText(6)" class="overlay-img">
+                    <div class="text-img">Tirol</div>
+                </div>
+            </div>
+            <div class="img-container grid-item">
+
+                <img src="images/Wappen/Kaernten.png" alt="Kärnten" class="imagea">
+
+                <div onclick="changeLandText(7)" class="overlay-img">
+                    <div class="text-img">Kärnten</div>
+                </div>
+            </div>
+            <div class="img-container grid-item">
+                <img src="images/Wappen/Vorarlberg.png" alt="Vorarlberg" class="imagea">
+                <div onclick="changeLandText(8)" class="overlay-img">
+                    <div class="text-img">Vorarlberg</div>
+                </div>
+            </div>
+            <div class="img-container grid-item">
+                <img src="images/Wappen/Burgenland.png" alt="Burgenland" class="imagea">
+                <div onclick="changeLandText(9)" class="overlay-img">
+                    <div class="text-img">Burgenland</div>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <h2 id="text-next-grid2">Bundesländer</h2>
+            <p id="text-next-grid">Wien ist die Bundeshauptstadt der Republik Österreich und zugleich eines der neun österreichischen Bundesländer. Mit rund 1,9 Millionen Einwohnern ist das an der Donau gelegene Wien die bevölkerungsreichste Großstadt und Primatstadt Österreichs,
+                die zweitgrößte im deutschen Sprachraum sowie die fünftgrößte Stadt der Europäischen Union.[9] Im Großraum Wien leben etwa 2,8 Millionen Menschen – das entspricht rund einem Drittel der österreichischen Gesamtbevölkerung.</p>
+        </div>
+    </div>
+
+    <div class="breaker"></div>
+
+
+    <br>
+    <div style="overflow:auto;" style="justify-content: center;">
+        <iframe class="float-vid" width="800rem" height="450rem" src="http://www.youtube.com/embed/eYaqM8J2csw" frameborder="0" allowfullscreen></iframe>
+        <h3 id="text-next-video">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+        <div class="clear"></div>
+    </div>
+
+
+    <div id="cookieConsent">
+        <div id="closeCookieConsent">x</div>
+        This is a Pfuscher Website made with luv and Ben & Jerrys Peanut Butter "Cookies". <a class="cookieConsentOK">Okidoki</a>
+    </div>
+
+
+</body>
+<footer id="sticky-footer" class="py-4 text-white-50">
+    <div id="footer-text" class="container text-center ">
+        <a class="footer-content" href="facebook.com">Facebook</a>
+        <a class="footer-content" href="instagram.com">Instagram</a>
+        <a id="LastVisit">Last Visited:</a>
+      </div>
+
+</footer>
+
+</html>
