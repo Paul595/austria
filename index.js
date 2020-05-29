@@ -8,10 +8,15 @@ var clearvalue = null;
 
 
 $(document).ready(function() {
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    document.cookie = "LastVisit=" + time + ";";
+    today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes();
+    console.log(getCookie("LastVisit"));
+    document.getElementById("LastVisit").innerHTML = getCookie("LastVisit") ;
 
-    checkResize();
+    document.cookie = "LastVisit=Last Visited at " + time + ";";
+
+
+   
     setTimeout(function() {
         $("#cookieConsent").fadeIn(200);
     }, 4000);
@@ -21,47 +26,37 @@ $(document).ready(function() {
     floatvalue = $("#grid-div div").css("float");
     clearvalue = $("#grid-div div").css("clear");
 
-    document.getElementById("text-next-grid").innerHTML = LaenderTexte[0];
-
-});
-
-$(window).on('resize', function() {
-    checkResize();
-});
-
-function checkResize() {
-
-    var win = $(this);
-
-
-    //If - Braucht echt große Hilfe
-    /*if (win.width() <= 1171) {
-        $(".breaker").css("background-color", "rgba(0, 0, 0, 0.075)");
-
-        $("#grid-div div").css("float", "left");
-
-        $("#grid-div div").css("clear", "none");
-
-    } else { //else pfad entfernt nicht die #grid-div div formatierung egal was probiert
-        $(".breaker").css("background-color", "rgba(0, 0, 0, 0.075)");
-    }*/
-
-    if (win.width() <= 1277) {
-        $(".topnav a.active").css("background-color", "rgba(0, 0, 0, 0)");
-        $(".topnav a.active").css("color", "red");
-
-    } else {
-        $(".topnav a.active").css("background-color", "rgba(187, 19, 19, 0.562)");
-        $(".topnav a.active").css("color", "white");
-
-
+    if(getCookie("Land") == ""){
+    document.getElementById("text-next-grid").innerHTML = LaenderTexte[0] ;
+    }else{
+    document.getElementById("text-next-grid").innerHTML = LaenderTexte[getCookie("Land")-1] ;
     }
+
+});
+
+function init(){
+
 }
 
 
-function init() {
 
-}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  
 
 
 
@@ -81,7 +76,6 @@ var LaenderTexte = [
 
 function changeLandText(land) {
     console.log(land);
-
     document.cookie = "Land=" + land + ";";
     document.getElementById("text-next-grid").innerHTML = LaenderTexte[land - 1];
 }
