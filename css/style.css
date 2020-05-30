@@ -3,11 +3,31 @@
 :root {
     --grid-item-size: 10rem;
     --grid-img-size: 60%;
-    --grid-font-size: 1.5rem;
+    --grid-font-size: 1.5rem;  
+}
 
-    
-    --footer-background: rgb(214, 214, 214);
-    --footer-textcolor: rgb(0, 0, 0);
+.light{
+    --footer-background: rgb(189, 189, 189);
+    --footer-textcolor: rgb(14, 14, 14);
+
+    --body-backgroundcolor:rgb(255, 255, 255);
+
+    --body-font-color: rgb(27, 27, 27);
+
+    --scrollbar-track: rgb(192, 192, 192);
+    --scrollbar-thumb: rgb(114, 114, 114);
+}
+
+.dark{
+    --footer-background: rgb(59, 55, 55);
+    --footer-textcolor: rgb(139, 139, 139);
+
+    --body-backgroundcolor:rgb(17, 17, 17);
+
+    --body-font-color: rgb(194, 194, 194);
+
+    --scrollbar-track: rgb(39, 39, 39);
+    --scrollbar-thumb: rgb(20, 20, 20);
 }
 
 .titlediv {
@@ -35,9 +55,11 @@
 }
 
 body {
-    /*background-color: rgb(110, 172, 169);*/
-    background-color: white;
+    /* background-color: rgb(110, 172, 169); */
+    background-color: var(--body-backgroundcolor) !important;
     zoom: 110%;
+
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 body::-webkit-scrollbar {
@@ -45,11 +67,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(7, 93, 88);
+    background-color: var(--scrollbar-thumb);
 }
 
 body::-webkit-scrollbar-track {
-    background-color: rgb(2, 37, 35);
+    background-color: var(--scrollbar-track)
 }
 
 
@@ -253,6 +275,8 @@ body::-webkit-scrollbar-track {
     padding-top: 1.5rem;
     padding-right: 4rem;
     padding-bottom: 1rem;
+
+    color: var( --body-font-color);
 }
 
 #text-next-grid2 {
@@ -264,6 +288,8 @@ body::-webkit-scrollbar-track {
     padding-bottom: 0rem;
     font-weight: 900;
     font-size: 2.5rem;
+
+    color: var(--body-font-color);
 }
 
 #text-next-video {
@@ -273,6 +299,7 @@ body::-webkit-scrollbar-track {
     padding-top: 4rem;
     padding-right: 1.5rem;
     margin-bottom: 2.5%;
+    color:var( --body-font-color);
 }
 
 

@@ -1,8 +1,3 @@
-init();
-
-
-
-
 var floatvalue = null;
 var clearvalue = null;
 
@@ -32,11 +27,14 @@ $(document).ready(function() {
     document.getElementById("text-next-grid").innerHTML = LaenderTexte[getCookie("Land")-1] ;
     }
 
+    if(getCookie("Color")!= ""){
+        if(getCookie("Color")=="dark"){
+            changeTheme();
+        }
+    }
+
 });
 
-function init(){
-
-}
 
 
 
@@ -95,4 +93,22 @@ function scrollFunction() {
         $(".topnav a.active").css("background-color", "rgba(187, 19, 19, 0.562)");
 
     }
+}
+
+
+function changeTheme(){
+    if(document.body.classList.contains('light')){
+        document.body.classList.remove('light');
+        document.body.classList.add('dark');
+        document.cookie = "Color=dark;"
+        document.getElementById("ThemeIndicator").src = "./icons/light-icons8-mondmann-50.png";
+    }else{
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+        document.cookie = "Color=light;"
+        document.getElementById("ThemeIndicator").src = "./icons/dark-icons8-mondmann-50.png";
+
+    }
+
+    
 }
